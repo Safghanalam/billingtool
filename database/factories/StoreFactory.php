@@ -20,6 +20,16 @@ class StoreFactory extends Factory
         return [
             'user_id' => User::factory(),
             'name' => $this->faker->name(),
+            'address_1' => $this->faker->address(),
+            'address_2' => $this->faker->address(),
+            'city' => $this->faker->city(),
+            'state' => $this->faker->country(),
+            'country' => $this->faker->country(),
+            'zip' => $this->faker->postcode(),
+            'gstin' => 'GST-'.$this->faker->postcode(),
+            'email' => $this->faker->unique()->safeEmail(),
+            'phone' => $this->faker->phoneNumber(),
+            'alternate_phone' => $this->faker->phoneNumber(),
         ];
     }
 }

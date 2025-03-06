@@ -15,6 +15,16 @@ return new class extends Migration
             $table->id();
             $table->foreignIdFor(\App\Models\User::class);
             $table->string('name');
+            $table->string('address_1');
+            $table->string('address_2')->nullable();
+            $table->string('city');
+            $table->string('state');
+            $table->string('country');
+            $table->string('zip');
+            $table->string('gstin')->nullable();
+            $table->string('email');
+            $table->string('phone');
+            $table->string('alternate_phone');
             $table->timestamps();
         });
     }
